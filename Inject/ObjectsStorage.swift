@@ -20,7 +20,7 @@ final class ObjectsStorage {
 		let key: Int
 	}
 	
-	private var scopes = [String: [ObjectKey: WeakContainer<Any>]]()
+	private var scopes = [String: [ObjectKey: WeakContainer]]()
 	private var singletones: [ObjectKey: Any] = [:]
 	
 	private let queue = DispatchQueue(label: "com.Instruments.ObjectStorage", qos: .userInitiated)

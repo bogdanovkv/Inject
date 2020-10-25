@@ -6,13 +6,13 @@
 //  Copyright © 2020 Константин Богданов. All rights reserved.
 //
 
-final class WeakContainer<Element> {
-	var value: Element? {
-		return element as? Element
+final class WeakContainer {
+	var value: Any? {
+		return element
 	}
 
 	private weak var element: AnyObject?
-	init(element: Element) {
+	init(element: Any) {
 		self.element = element as AnyObject
 	}
 }
